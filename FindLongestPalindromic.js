@@ -25,10 +25,9 @@ const checkPalindrom = (text = "") => {
           resultTest = isPalindrome(testArrayPalindrome);
   
           //ถ้าเช็คแล้วเป็นจำนวน palindrome ให้เก็บค่าตัวที่มีสมาชิกยาวที่สุดใส่ใน thisArrayPalindrome
-          if (resultTest === true) {
-            if (thisArrayPalindrome.length < saveArray.length) {
-              thisArrayPalindrome = saveArray;
-            }
+          if ((resultTest === true) && (thisArrayPalindrome.length < saveArray.length)) {
+            thisArrayPalindrome = saveArray;
+
           }
         }
       }
@@ -45,5 +44,5 @@ const checkPalindrom = (text = "") => {
     }
   };
   
-  console.log(checkPalindrom("annaaaaaaann"));
+  console.log(checkPalindrom("aabbba"));
   
