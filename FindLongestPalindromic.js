@@ -19,7 +19,7 @@ const checkPalindrom = (text = "") => {
 
 
     //Loop หา palindrome ที่ยาวที่สุด
-    for (i = 0; i < arrayInput.length; i++) {
+    for (i = 0; i < (arrayInput.length - thisArrayPalindrome.length) ; i++) {
       for (j = i + 1; j <= arrayInput.length; j++) {
         testArrayPalindrome = arrayInput.slice(i, j);
         //ตรงนี้ต้องใช้การ map แทนการแทนค่า thisArrayPalindrome = testArrayPalindrome
@@ -48,9 +48,10 @@ const checkPalindrom = (text = "") => {
     return thisArrayPalindrome;
 
 
-  } else {
+  } 
+  else {
     return "จำนวนตัวอักษรมากกว่า 1000 ตัวอักษรกรุณาใส่ให้น้อยกว่า 1000 ตัวอักษร";
   }
 };
 
-console.log(checkPalindrom("aabbba"));
+console.log(checkPalindrom("aba"));
